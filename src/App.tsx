@@ -29,7 +29,7 @@ function App() {
   }, [])
 
   const onKeyDown = (e: KeyboardEvent) => {
-    setPressedKey(e.key)
+    setPressedKey(e.key.toLowerCase())
     setTimeout(() => {
       setPressedKey('')
     },100)
