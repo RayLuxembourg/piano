@@ -40,6 +40,11 @@ export const RecordSlice = createSlice({
             })
         },
         playRecord: (state, action: PayloadAction<number>) => {
+            /**
+             * TODO: when playing a record there is a need to stop
+             * any other records that are being played or not allow while playing
+             * 
+             */
             const createTimeoutCallback = (ms: number, key: string) => {
                 return () => setTimeout(() => {
                     window.dispatchEvent(new KeyboardEvent('keydown', {

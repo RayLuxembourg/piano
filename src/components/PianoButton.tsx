@@ -52,7 +52,7 @@ type Props = {
 }
 
 export default function PianoButton({ onPlaying, pressed,buttonSound, isSharp, char }: Props) {
-    const audioRef = useRef<HTMLAudioElement>();
+    const audioRef = useRef<HTMLAudioElement>(null);
 
     useEffect(() => {
         if (pressed) onPlay()
@@ -68,8 +68,7 @@ export default function PianoButton({ onPlaying, pressed,buttonSound, isSharp, c
 
     const style = isSharp ? sharpButtonStyle : buttonStyle
     return (
-        <Box {...style} onClick={onPlay}  >
-            {/* @ts-ignore */}
+        <Box cursor={'pointer'} {...style} onClick={onPlay}  >
             <audio ref={audioRef} src={buttonSound} />
             <Box pos={'absolute'} zIndex={2} left={2} bottom={2} color={'red'}>{char}</Box>
         </Box>
