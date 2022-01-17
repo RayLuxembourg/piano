@@ -54,7 +54,7 @@ function App() {
       <Stack width={'200px'} p={[2]} >
         <Button onClick={handleRecordButton}>{isRecording ? 'Stop Recording' : 'Start new Record'}</Button>
         {recordList.map((r, index) => {
-          return <Button onClick={() => {
+          return <Button key={`record-${index}`} onClick={() => {
             dispatch(playRecord(index))
           }}>Record {index + 1}</Button>
         })}
