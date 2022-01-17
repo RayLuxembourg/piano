@@ -30,6 +30,9 @@ function App() {
 
   const onKeyDown = (e: KeyboardEvent) => {
     setPressedKey(e.key)
+        setTimeout(() => {
+      setPressedKey('')
+    },100)
   }
   
   const handleRecordButton = () => {
