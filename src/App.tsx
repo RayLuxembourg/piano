@@ -30,7 +30,7 @@ function App() {
 
   const onKeyDown = (e: KeyboardEvent) => {
     setPressedKey(e.key)
-        setTimeout(() => {
+    setTimeout(() => {
       setPressedKey('')
     },100)
   }
