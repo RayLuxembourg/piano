@@ -58,7 +58,6 @@ export const RecordSlice = createSlice({
     },
 })
 
-// Action creators are generated for each case reducer function
 export const { addPlaybackToRecord, startRecording, stopRecording,playRecord } = RecordSlice.actions
 
 export default RecordSlice.reducer

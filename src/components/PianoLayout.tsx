@@ -1,14 +1,28 @@
 import React from 'react'
-import { Box } from '@chakra-ui/react'
+import { chakra } from '@chakra-ui/react'
 import PianoButton from './PianoButton';
-import notes from '../notesData.json'
+import type { Notes } from '../types';
 
+type Props = {
+    notes: Notes
+    pressedKey: string
+}
+const PianoLayoutComponent = chakra('div', {
+    baseStyle: {
+      display:'flex',
+      bgColor:'brown',
+      p:[4],
+      justifyContent:'center',
+      alignContent:'center'
+    },
+})
+  
 
-export default function PianoLayout() {
+export default function PianoLayout({ notes,pressedKey }: Props) {
     return (
-        <Box display={'flex'} bgColor={'brown'} p={[4]} justifyContent={'center'} alignContent={'center'}>
+        <PianoLayoutComponent>
             {notes.map(note =>
-                <PianoButton key={note.key} char={note.char} isSharp={note.sharp}  buttonSound={note.sound} />)}
-        </Box>
+                <PianoButton pressed={pressedKey === note.char} key={note.key} char={note.char} isSharp={note.sharp} buttonSound={note.sound} />)}
+        </PianoLayoutComponent>
     )
 }
