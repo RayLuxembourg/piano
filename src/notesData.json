@@ -1,0 +1,128 @@
+[
+    {
+        "note": "C",
+        "sharp": false,
+        "sound": "http://carolinegabriel.com/demo/js-keyboard/sounds/040.wav",
+        "key": "65",
+        "char": "a"
+    },
+    {
+        "note": "C#",
+        "sharp": true,
+        "sound": "http://carolinegabriel.com/demo/js-keyboard/sounds/041.wav",
+        "key": "87",
+        "char": "w"
+    },
+    {
+        "note": "D",
+        "sharp": false,
+        "sound": "http://carolinegabriel.com/demo/js-keyboard/sounds/042.wav",
+        "key": "83",
+        "char": "s"
+
+    },
+    {
+        "note": "D#",
+        "sharp": true,
+        "sound": "http://carolinegabriel.com/demo/js-keyboard/sounds/043.wav",
+        "key": "69",
+        "char": "e"
+    },
+    {
+        "note": "E",
+        "sharp": false,
+        "sound": "http://carolinegabriel.com/demo/js-keyboard/sounds/044.wav",
+        "key": "68",
+        "char": "d"
+
+    },
+    {
+        "note": "F",
+        "sharp": false,
+        "sound": "http://carolinegabriel.com/demo/js-keyboard/sounds/045.wav",
+        "key": "70",
+        "char": "f"
+
+    },
+    {
+        "note": "F#",
+        "sharp": true,
+        "sound": "http://carolinegabriel.com/demo/js-keyboard/sounds/046.wav",
+        "key": "84",
+        "char": "t"
+    },
+    {
+        "note": "G",
+        "sharp": false,
+        "sound": "http://carolinegabriel.com/demo/js-keyboard/sounds/047.wav",
+        "key": "71",
+        "char": "g"
+
+    },
+    {
+        "note": "G#",
+        "sharp": true,
+        "sound": "http://carolinegabriel.com/demo/js-keyboard/sounds/048.wav",
+        "key": "89",
+        "char": "y"
+
+    },
+    {
+        "note": "A",
+        "sharp": false,
+        "sound": "http://carolinegabriel.com/demo/js-keyboard/sounds/049.wav",
+        "key": "72",
+        "char": "h"
+
+    },
+    {
+        "note": "A#",
+        "sharp": true,
+        "sound": "http://carolinegabriel.com/demo/js-keyboard/sounds/050.wav",
+        "key": "85",
+        "char": "u"
+
+    },
+    {
+        "note": "B",
+        "sharp": false,
+        "sound": "http://carolinegabriel.com/demo/js-keyboard/sounds/051.wav",
+        "key": "74",
+        "char": "j"
+    },
+    {
+        "note": "C",
+        "sharp": false,
+        "sound": "http://carolinegabriel.com/demo/js-keyboard/sounds/052.wav",
+        "key": "75",
+        "char": "k"
+    },
+    {
+        "note": "C#",
+        "sharp": true,
+        "sound": "http://carolinegabriel.com/demo/js-keyboard/sounds/053.wav",
+        "key": "79",
+        "char": "o"
+    },
+    {
+        "note": "D",
+        "sharp": false,
+        "sound": "http://carolinegabriel.com/demo/js-keyboard/sounds/054.wav",
+        "key": "76",
+        "char": "l"
+    },
+    {
+        "note": "D#",
+        "sharp": true,
+        "sound": "http://carolinegabriel.com/demo/js-keyboard/sounds/055.wav",
+        "key": "80",
+        "char": "p"
+    },
+    {
+        "note": "E",
+        "sharp": false,
+        "sound": "http://carolinegabriel.com/demo/js-keyboard/sounds/056.wav",
+        "key": "186",
+        "char": ";"
+    }
+]
