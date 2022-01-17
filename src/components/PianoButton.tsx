@@ -1,7 +1,6 @@
 import React, { useEffect, useRef } from 'react'
 import { Box, BoxProps } from '@chakra-ui/react'
-import { useDispatch } from 'react-redux'
-import { addPlaybackToRecord } from '../redux/recordSlice'
+
 
 const activeButton: BoxProps = {
     borderTop: "1px solid #777",
@@ -48,11 +47,11 @@ type Props = {
     buttonSound: string
     isSharp: boolean
     char: string
-    pressed: boolean
+    pressed: boolean,
+    onPlaying: (char: string) => void
 }
 
-export default function PianoButton({ pressed,buttonSound, isSharp, char }: Props) {
-    const dispatch = useDispatch()
+export default function PianoButton({ onPlaying, pressed,buttonSound, isSharp, char }: Props) {
     const audioRef = useRef<HTMLAudioElement>();
 
     useEffect(() => {
@@ -63,13 +62,8 @@ export default function PianoButton({ pressed,buttonSound, isSharp, char }: Prop
         if (audioRef.current) {
             audioRef.current.currentTime = 0
             audioRef.current.play()
-            dispatch(addPlaybackToRecord(char))
+            onPlaying(char);
         }
-    }
-    const onKeyDown = (e: KeyboardEvent) => {
-        console.log(e.key)
-        if (e.key === char) onPlay();
-
     }
 
     const style = isSharp ? sharpButtonStyle : buttonStyle
