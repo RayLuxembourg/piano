@@ -4,13 +4,14 @@ import { Provider } from 'react-redux'
 import ReactDOM from 'react-dom';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import { ChakraProvider, theme } from '@chakra-ui/react'
+import { Button, ChakraProvider, theme } from '@chakra-ui/react'
 import { store } from './redux/store';
 
 ReactDOM.render(
   <React.StrictMode>
     <Provider store={store}>
-    <ChakraProvider resetCSS={true} theme={theme}>
+    <ChakraProvider resetCSS={true} theme={{...theme}}>
+      <Button   />
       <App />
     </ChakraProvider>
     </Provider>

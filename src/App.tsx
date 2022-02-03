@@ -21,6 +21,13 @@ function App() {
 
   const dispatch = useDispatch()
   useEffect(() => {
+    // Only one instance of this function ever created
+    const onKeyDown = (e: KeyboardEvent) => {
+      setPressedKey(e.key.toLowerCase())
+      setTimeout(() => {
+        setPressedKey('')
+      }, 100)
+    }
     window.addEventListener("keydown", onKeyDown);
 
     return () => {
@@ -28,19 +35,12 @@ function App() {
     }
   }, [])
 
-  const onKeyDown = (e: KeyboardEvent) => {
-    setPressedKey(e.key.toLowerCase())
-    setTimeout(() => {
-      setPressedKey('')
-    },100)
-  }
-  
   const handleRecordButton = () => {
     if (isRecording) return dispatch(stopRecording())
     return dispatch(startRecording());
   }
 
-  const onPlaying = (char:string) => {
+  const onPlaying = (char: string) => {
     dispatch(addPlaybackToRecord(char))
   }
 

@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react'
+import React, { useCallback, useEffect, useRef } from 'react'
 import { Box, BoxProps } from '@chakra-ui/react'
 
 
@@ -51,20 +51,21 @@ type Props = {
     onPlaying: (char: string) => void
 }
 
-export default function PianoButton({ onPlaying, pressed,buttonSound, isSharp, char }: Props) {
+export default function PianoButton({ onPlaying, pressed, buttonSound, isSharp, char }: Props) {
     const audioRef = useRef<HTMLAudioElement>(null);
 
     useEffect(() => {
         if (pressed) onPlay()
     }, [pressed])
 
-    const onPlay = () => {
+    const onPlay = useCallback(() => {
         if (audioRef.current) {
             audioRef.current.currentTime = 0
             audioRef.current.play()
             onPlaying(char);
         }
-    }
+    }, []);
+
 
     const style = isSharp ? sharpButtonStyle : buttonStyle
     return (
