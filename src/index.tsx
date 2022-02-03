@@ -11,7 +11,6 @@ ReactDOM.render(
   <React.StrictMode>
     <Provider store={store}>
     <ChakraProvider resetCSS={true} theme={{...theme}}>
-      <Button   />
       <App />
     </ChakraProvider>
     </Provider>
