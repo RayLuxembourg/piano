@@ -1,12 +1,12 @@
 {
   "files": {
-    "main.js": "/piano/static/js/main.11ec93e3.js",
+    "main.js": "/piano/static/js/main.d67bee1e.js",
     "static/js/787.b25768f4.chunk.js": "/piano/static/js/787.b25768f4.chunk.js",
     "index.html": "/piano/index.html",
-    "main.11ec93e3.js.map": "/piano/static/js/main.11ec93e3.js.map",
+    "main.d67bee1e.js.map": "/piano/static/js/main.d67bee1e.js.map",
     "787.b25768f4.chunk.js.map": "/piano/static/js/787.b25768f4.chunk.js.map"
   },
   "entrypoints": [
-    "static/js/main.11ec93e3.js"
+    "static/js/main.d67bee1e.js"
   ]
 }
